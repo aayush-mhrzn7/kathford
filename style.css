@@ -5,11 +5,69 @@
     margin: 0;
     box-sizing: border-box; 
     font-family: "Manrope", sans-serif;
-    cursor:  default;
+    
 }
 ::-webkit-scrollbar{
     display: none;
 }
+/* body{
+   
+    height: 100vh;
+}
+.cursor{
+    width: 15px ;
+    height: 15px ;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+   
+    transition-duration: 200ms ;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+}
+
+.cursor::after{
+    content: "";
+    width: 15px ;
+    height: 15px ;
+    position: absolute;
+    border: 5px solid ;
+    border-radius: 50%;
+    opacity: .5;
+    top: -5px;
+    animation: cursorAnim2 infinite alternate;
+}
+
+.expand{
+    animation: cursorAnim3 .5 forwards;
+    border: 1px solid red;
+}
+
+@keyframes cursorAnim {
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(.7);
+    }
+}
+@keyframes cursorAnim2 {
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(.4);
+    }
+}
+@keyframes cursorAnim3 {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(3);
+    }100%{
+        transform: scaleX(1);
+        opacity: 0;
+    }
+}
+ */
 #header{
     width: 100%;
     height: 80px;
@@ -136,6 +194,9 @@ button{
    display: grid;
    grid-template-columns: repeat(2,1fr);
    gap: 40px;
+   animation: move 0.5s linear ;
+animation-play-state: paused;
+animation-delay: calc(var(--scroll) * -1s);
    
  
 }
@@ -177,10 +238,14 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    animation: move 0.9s linear ;
+animation-play-state: paused;
+animation-delay: calc(var(--scroll) * -1s);
 }
 .feature .item{
     width: 30%;
     height: 30%;
+
 }
 .feature .item .img{
     width: 100%;
@@ -203,6 +268,9 @@ margin-bottom: 10px;
 /*  */
 #questions{
     border-top: 1px solid rgb(139, 139, 139);
+    animation: move 1s linear ;
+animation-play-state: paused;
+animation-delay: calc(var(--scroll) * -1s);
   
 }
 /* Style the buttons that are used to open and close the accordion panel */
@@ -355,6 +423,9 @@ font-size: 20px;
     
     gap: 30px;
     margin-top: 20px;
+    animation: move 0.3s linear ;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 #vision .container .card{
     
@@ -388,8 +459,22 @@ gap: 40px;
 margin-bottom: 70px;
 padding: 60px;
 box-shadow: -10px 8px 10px rgba(65, 63, 63, 0.171);
+animation: move 0.5s linear ;
+animation-play-state: paused;
+animation-delay: calc(var(--scroll) * -1s);
 
 }
+#achievements .container .card:nth-child(2){
+    animation: move 0.6s linear ;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);   
+}
+#achievements .container .card:nth-child(3){
+    animation: move 0.7s linear ;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);   
+}
+
 #achievements .container .card .img{
     width: 100%;
     height: 100%;
@@ -411,11 +496,15 @@ box-shadow: -10px 8px 10px rgba(65, 63, 63, 0.171);
 display: flex;
 align-items: center;
 justify-content: center;
+
 }
 #newsletter .content {
     text-align: center;
     padding: 20px;
     width: 60%;
+    animation: move 0.5s linear ;
+animation-play-state: paused;
+animation-delay: calc(var(--scroll) * -1s);
 }
 #newsletter .content h2{
 font-size: 40px;
@@ -515,6 +604,9 @@ transition: 0.2s ease-in-out all;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: move 0.5s linear ;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
 }
 
 #findus h3{
@@ -523,6 +615,7 @@ transition: 0.2s ease-in-out all;
 }
 #findus iframe{
     width: 100%;
+    
 }
 #form .container{
     display: grid;
@@ -714,4 +807,27 @@ font-size: 18px;
 }
 
 
+}
+
+@keyframes move {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+        
+    }to{
+        transform: translateX(0);
+        opacity: 1;
+        
+    }
+}
+@keyframes up{
+    from{
+       
+        opacity: 0;
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
 }
