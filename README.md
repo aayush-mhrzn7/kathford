@@ -14,5 +14,5 @@ Kathford College is a leading institution dedicated to providing quality educati
 - **Student Support Services:** We offer various student support services, including counseling, career guidance, and extracurricular activities to ensure holistic development.
 - **Research and Innovation:** Kathford encourages research and innovation among students and faculty, promoting a culture of continuous learning and exploration.
 
-###view the project here 
+view this here
 https://kathford.vercel.app/
